@@ -1,21 +1,48 @@
-'use strict';
+let isRecording = false;
 
-// With background scripts you can communicate with popup
-// and contentScript files.
-// For more information on background script,
-// See https://developer.chrome.com/extensions/background_pages
+// Function to start recording
+function startRecording() {
+  if (isRecording) {
+    console.log("Recording already in progress.");
+    return;
+  }
 
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    chrome.scripting.executeScript(
+      {
+        target: { tabId: tabs[0].id },
+        files: ["contentScript.js"],
+      },
+      () => {
+        chrome.tabs.sendMessage(tabs[0].id, { msg: "start-record" });
+      }
+    );
+  });
+
+  isRecording = true;
+}
+
+// Function to stop recording
+function stopRecording() {
+  if (!isRecording) {
+    console.log("No recording in progress.");
+    return;
+  }
+
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    chrome.tabs.sendMessage(tabs[0].id, { msg: "stop-record" });
+  });
+
+  isRecording = false;
+}
+
+// Listen for messages from popup.js
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.type === 'GREETINGS') {
-    const message = `Hi ${
-      sender.tab ? 'Con' : 'Pop'
-    }, my name is Bac. I am from Background. It's great to hear from you.`;
-
-    // Log message coming from the `request` parameter
-    console.log(request.payload.message);
-    // Send a response message
-    sendResponse({
-      message,
-    });
+  if (request.type === "start-record") {
+    startRecording();
+    sendResponse({ message: "Recording started" });
+  } else if (request.type === "stop-record") {
+    stopRecording();
+    sendResponse({ message: "Recording stopped" });
   }
 });

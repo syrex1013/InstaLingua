@@ -1,43 +1,67 @@
-'use strict';
+// contentScript.js
 
-// Content script file will run in the context of web page.
-// With content script you can manipulate the web pages using
-// Document Object Model (DOM).
-// You can also pass information to the parent extension.
+let mediaRecorder = null;
+let stream = null;
+let audioChunks = [];
 
-// We execute this script by making an entry in manifest.json file
-// under `content_scripts` property
-
-// For more information on Content Scripts,
-// See https://developer.chrome.com/extensions/content_scripts
-
-// Log `title` of current active web page
-const pageTitle = document.head.getElementsByTagName('title')[0].innerHTML;
-console.log(
-  `Page title is: '${pageTitle}' - evaluated by Chrome extension's 'contentScript.js' file`
-);
-
-// Communicate with background file by sending a message
-chrome.runtime.sendMessage(
-  {
-    type: 'GREETINGS',
-    payload: {
-      message: 'Hello, my name is Con. I am from ContentScript.',
-    },
-  },
-  response => {
-    console.log(response.message);
+// Function to start recording
+function startRecording() {
+  if (mediaRecorder) {
+    console.log("Recording already in progress.");
+    return;
   }
-);
 
-// Listen for message
+  navigator.mediaDevices
+    .getUserMedia({ audio: true })
+    .then((userStream) => {
+      stream = userStream;
+      mediaRecorder = new MediaRecorder(stream, { mimeType: "audio/webm" });
+
+      mediaRecorder.addEventListener("dataavailable", (event) => {
+        audioChunks.push(event.data);
+      });
+
+      mediaRecorder.addEventListener("stop", () => {
+        const blob = new Blob(audioChunks, { type: "audio/webm" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.style = "display: none";
+        a.href = url;
+        a.download = document.title + ".webm";
+        document.body.appendChild(a);
+        a.click();
+        URL.revokeObjectURL(url);
+      });
+
+      mediaRecorder.start();
+      console.log("Recording started");
+    })
+    .catch((error) => {
+      console.error("Error accessing microphone:", error);
+    });
+}
+
+// Function to stop recording
+function stopRecording() {
+  if (!mediaRecorder) {
+    console.log("No recording in progress.");
+    return;
+  }
+
+  mediaRecorder.stop();
+  stream.getTracks().forEach((track) => track.stop());
+  mediaRecorder = null;
+  audioChunks = [];
+  console.log("Recording stopped");
+}
+
+// Listen for messages from background.js
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.type === 'COUNT') {
-    console.log(`Current count is ${request.payload.count}`);
+  if (request.msg === "start-record") {
+    startRecording();
+    sendResponse({ response: "Recording started" });
+  } else if (request.msg === "stop-record") {
+    stopRecording();
+    sendResponse({ response: "Recording stopped" });
   }
-
-  // Send an empty response
-  // See https://github.com/mozilla/webextension-polyfill/issues/130#issuecomment-531531890
-  sendResponse({});
-  return true;
 });
