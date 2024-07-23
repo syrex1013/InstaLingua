@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Talktome",
-  "version": "0.1.0",
-  "description": "My Chrome Extension",
+  "name": "InstaLingua",
+  "version": "1.0.0",
+  "description": "Translate Polish voice input into English text seamlessly on Instagram.",
   "icons": {
     "16": "icons/icon_16.png",
     "32": "icons/icon_32.png",
@@ -13,15 +13,15 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "Talktome",
+    "default_title": "InstaLingua",
     "default_popup": "popup.html"
   },
-  "permissions": ["storage", "activeTab", "scripting"],
+  "permissions": ["background", "storage", "activeTab", "scripting"],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "run_at": "document_idle",
       "js": ["contentScript.js"]
     }
-  ]
+  ],
+  "host_permissions": ["<all_urls>"]
 }

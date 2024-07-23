@@ -1,50 +1,22 @@
-"use strict";
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("start-record-btn").addEventListener("click", () => {
+    chrome.runtime.sendMessage({ msg: "start-record" }, (response) => {
+      console.log(response.response);
+    });
+  });
 
-import "./popup.css";
+  document.getElementById("stop-record-btn").addEventListener("click", () => {
+    chrome.runtime.sendMessage({ msg: "stop-record" }, (response) => {
+      console.log(response.response);
+    });
+  });
 
-(function () {
-  document.addEventListener("DOMContentLoaded", () => {
-    const startRecordingBtn = document.getElementById("startRecordingBtn");
-    const stopRecordingBtn = document.getElementById("stopRecordingBtn");
-
-    if (startRecordingBtn && stopRecordingBtn) {
-      startRecordingBtn.addEventListener("click", () => {
-        chrome.runtime.sendMessage(
-          {
-            type: "start-record",
-            payload: {
-              message: "Start of recording",
-            },
-          },
-          (response) => {
-            if (chrome.runtime.lastError) {
-              console.error("Error sending message:", chrome.runtime.lastError);
-            } else {
-              console.log(response.message);
-            }
-          }
-        );
-      });
-
-      stopRecordingBtn.addEventListener("click", () => {
-        chrome.runtime.sendMessage(
-          {
-            type: "stop-record",
-            payload: {
-              message: "Stoppage of recording",
-            },
-          },
-          (response) => {
-            if (chrome.runtime.lastError) {
-              console.error("Error sending message:", chrome.runtime.lastError);
-            } else {
-              console.log(response.message);
-            }
-          }
-        );
-      });
-    } else {
-      console.error("Buttons not found");
+  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.type === "update-status") {
+      document.getElementById("status").textContent = request.data;
+    } else if (request.type === "update-result") {
+      document.getElementById("result").textContent = request.data;
+      document.getElementById("status").textContent = "Translation complete.";
     }
   });
-})();
+});

@@ -1,23 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <title>My Chrome Extension</title>
-    <link rel="stylesheet" href="popup.css" />
+    <title>InstaLingua</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
-    <div class="app">
-      <p class="counter-label">Mów kurwa</p>
-      <button id="startRecordingBtn">Start Recording</button>
-      <button id="stopRecordingBtn">Stop Recording</button>
-    </div>
-
+    <h1>InstaLingua Voice Recorder</h1>
+    <button id="start-record-btn">Start Recording</button>
+    <button id="stop-record-btn">Stop Recording</button>
+    <p id="status">Press the button and speak in Polish.</p>
+    <p id="result"></p>
     <script src="popup.js"></script>
-
-    <!--
-    This HTML file opens when you click on icon from the toolbar.
-
-    To begin the development, run `npm run watch`.
-    To create a production bundle, use `npm run build`.
-  --></body>
+  </body>
 </html>
