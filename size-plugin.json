@@ -1,1 +1,1280 @@
-[{"timestamp":1721824856512,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":673,"size":673,"diff":0},{"filename":"background.js","previous":4764,"size":4771,"diff":7},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721824730409,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":673,"size":673,"diff":0},{"filename":"background.js","previous":4760,"size":4764,"diff":4},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721823750676,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":673,"size":673,"diff":0},{"filename":"background.js","previous":4857,"size":4760,"diff":-97},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721823574862,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":673,"size":673,"diff":0},{"filename":"background.js","previous":6328,"size":4857,"diff":-1471},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721823196559,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":685,"size":673,"diff":-12},{"filename":"background.js","previous":5933,"size":6328,"diff":395},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721822715527,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":678,"size":685,"diff":7},{"filename":"background.js","previous":5930,"size":5933,"diff":3},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721822660684,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":673,"size":678,"diff":5},{"filename":"background.js","previous":5949,"size":5930,"diff":-19},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721822130242,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":673,"size":673,"diff":0},{"filename":"background.js","previous":5932,"size":5949,"diff":17},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721822076623,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":673,"size":673,"diff":0},{"filename":"background.js","previous":5936,"size":5932,"diff":-4},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721821716770,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":673,"size":673,"diff":0},{"filename":"background.js","previous":6006,"size":5936,"diff":-70},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721821562582,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":673,"size":673,"diff":0},{"filename":"background.js","previous":6030,"size":6006,"diff":-24},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721821332246,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":673,"size":673,"diff":0},{"filename":"background.js","previous":6029,"size":6030,"diff":1},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721821271910,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":673,"size":673,"diff":0},{"filename":"background.js","previous":6187,"size":6029,"diff":-158},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721821030300,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":673,"size":673,"diff":0},{"filename":"background.js","previous":6172,"size":6187,"diff":15},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721820826141,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":673,"size":673,"diff":0},{"filename":"background.js","previous":6333,"size":6172,"diff":-161},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721820720815,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":673,"size":673,"diff":0},{"filename":"background.js","previous":6324,"size":6333,"diff":9},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721820427938,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":673,"size":673,"diff":0},{"filename":"background.js","previous":6336,"size":6324,"diff":-12},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721820353321,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":673,"size":673,"diff":0},{"filename":"background.js","previous":6322,"size":6336,"diff":14},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721820209562,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":673,"size":673,"diff":0},{"filename":"background.js","previous":6343,"size":6322,"diff":-21},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721819884907,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":666,"size":673,"diff":7},{"filename":"background.js","previous":6267,"size":6343,"diff":76},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721819482334,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":666,"size":666,"diff":0},{"filename":"background.js","previous":6229,"size":6267,"diff":38},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721819367404,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":665,"size":666,"diff":1},{"filename":"background.js","previous":6233,"size":6229,"diff":-4},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721819021427,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":666,"size":665,"diff":-1},{"filename":"background.js","previous":6233,"size":6233,"diff":0},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721818790143,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":666,"size":666,"diff":0},{"filename":"background.js","previous":6222,"size":6233,"diff":11},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721818279187,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":652,"size":666,"diff":14},{"filename":"background.js","previous":6222,"size":6222,"diff":0},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721818175134,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":650,"size":652,"diff":2},{"filename":"background.js","previous":6222,"size":6222,"diff":0},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721818140222,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":635,"size":650,"diff":15},{"filename":"background.js","previous":6222,"size":6222,"diff":0},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721817953529,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":635,"size":635,"diff":0},{"filename":"background.js","previous":6211,"size":6222,"diff":11},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721817778495,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":635,"size":635,"diff":0},{"filename":"background.js","previous":6219,"size":6211,"diff":-8},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721817691740,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":635,"size":635,"diff":0},{"filename":"background.js","previous":6220,"size":6219,"diff":-1},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721817417103,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":635,"size":635,"diff":0},{"filename":"background.js","previous":6207,"size":6220,"diff":13},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721817298634,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":635,"size":635,"diff":0},{"filename":"background.js","previous":4926,"size":6207,"diff":1281},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721817158533,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":635,"size":635,"diff":0},{"filename":"background.js","previous":4878,"size":4926,"diff":48},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721816856709,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":635,"size":635,"diff":0},{"filename":"background.js","previous":4889,"size":4878,"diff":-11},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721816785770,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":635,"size":635,"diff":0},{"filename":"background.js","previous":4890,"size":4889,"diff":-1},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721816641706,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":635,"size":635,"diff":0},{"filename":"background.js","previous":4885,"size":4890,"diff":5},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721816414700,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":636,"size":635,"diff":-1},{"filename":"background.js","previous":4885,"size":4885,"diff":0},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721816229497,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":909,"size":636,"diff":-273},{"filename":"background.js","previous":4364,"size":4885,"diff":521},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721814247800,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":889,"size":909,"diff":20},{"filename":"background.js","previous":4364,"size":4364,"diff":0},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721813063828,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":867,"size":889,"diff":22},{"filename":"background.js","previous":4364,"size":4364,"diff":0},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721813025558,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":889,"size":867,"diff":-22},{"filename":"background.js","previous":4364,"size":4364,"diff":0},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721812992853,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":867,"size":889,"diff":22},{"filename":"background.js","previous":4364,"size":4364,"diff":0},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721812162379,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":864,"size":867,"diff":3},{"filename":"background.js","previous":4364,"size":4364,"diff":0},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721811789598,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":816,"size":864,"diff":48},{"filename":"background.js","previous":4364,"size":4364,"diff":0},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721760237141,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":752,"size":816,"diff":64},{"filename":"background.js","previous":4322,"size":4364,"diff":42},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721759789883,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":783,"size":752,"diff":-31},{"filename":"background.js","previous":4322,"size":4322,"diff":0},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721759683505,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":843,"size":783,"diff":-60},{"filename":"background.js","previous":4326,"size":4322,"diff":-4},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721759488174,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":782,"size":843,"diff":61},{"filename":"background.js","previous":4230,"size":4326,"diff":96},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721759323842,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":4884,"size":782,"diff":-4102},{"filename":"background.js","previous":238,"size":4230,"diff":3992},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721744602433,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":4841,"size":4884,"diff":43},{"filename":"background.js","previous":238,"size":238,"diff":0},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721744518289,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":4840,"size":4841,"diff":1},{"filename":"background.js","previous":238,"size":238,"diff":0},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721744380341,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":871,"size":4840,"diff":3969},{"filename":"background.js","previous":238,"size":238,"diff":0},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721744301821,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":859,"size":871,"diff":12},{"filename":"background.js","previous":238,"size":238,"diff":0},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721744228962,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":4884,"size":859,"diff":-4025},{"filename":"background.js","previous":238,"size":238,"diff":0},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721743970759,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":4932,"size":4884,"diff":-48},{"filename":"background.js","previous":238,"size":238,"diff":0},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721743835986,"files":[{"filename":"popup.js","previous":211,"size":211,"diff":0},{"filename":"contentScript.js","previous":4884,"size":4932,"diff":48},{"filename":"background.js","previous":238,"size":238,"diff":0},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721743427644,"files":[{"filename":"popup.js","previous":292,"size":211,"diff":-81},{"filename":"contentScript.js","previous":922,"size":4884,"diff":3962},{"filename":"background.js","previous":4336,"size":238,"diff":-4098},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721733393967,"files":[{"filename":"popup.js","previous":292,"size":292,"diff":0},{"filename":"contentScript.js","previous":925,"size":922,"diff":-3},{"filename":"background.js","previous":4336,"size":4336,"diff":0},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721733214253,"files":[{"filename":"popup.js","previous":292,"size":292,"diff":0},{"filename":"contentScript.js","previous":925,"size":925,"diff":0},{"filename":"background.js","previous":4333,"size":4336,"diff":3},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721729377714,"files":[{"filename":"popup.js","previous":308,"size":292,"diff":-16},{"filename":"contentScript.js","previous":925,"size":925,"diff":0},{"filename":"background.js","previous":4333,"size":4333,"diff":0},{"filename":"popup.html","previous":234,"size":253,"diff":19},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721727371733,"files":[{"filename":"popup.js","previous":308,"size":308,"diff":0},{"filename":"contentScript.js","previous":925,"size":925,"diff":0},{"filename":"background.js","previous":4333,"size":4333,"diff":0},{"filename":"popup.html","previous":253,"size":234,"diff":-19},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721727227491,"files":[{"filename":"popup.js","previous":308,"size":308,"diff":0},{"filename":"contentScript.js","previous":1019,"size":925,"diff":-94},{"filename":"background.js","previous":4343,"size":4333,"diff":-10},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721726946187,"files":[{"filename":"popup.js","previous":308,"size":308,"diff":0},{"filename":"contentScript.js","previous":1025,"size":1019,"diff":-6},{"filename":"background.js","previous":4333,"size":4343,"diff":10},{"filename":"popup.html","previous":253,"size":253,"diff":0},{"filename":"styles.css","previous":231,"size":231,"diff":0}]},{"timestamp":1721726248308,"files":[{"filename":"popup.js","previous":308,"size":308,"diff":0},{"filename":"contentScript.js","previous":1025,"size":1025,"diff":0},{"filename":"background.js","previous":4333,"size":4333,"diff":0},{"filename":"popup.html","previous":230,"size":253,"diff":23},{"filename":"styles.css","previous":0,"size":231,"diff":231}]},{"timestamp":1721725979169,"files":[{"filename":"popup.js","previous":212,"size":308,"diff":96},{"filename":"contentScript.js","previous":925,"size":1025,"diff":100},{"filename":"background.js","previous":4333,"size":4333,"diff":0},{"filename":"popup.html","previous":373,"size":230,"diff":-143}]},{"timestamp":1721724660589,"files":[{"filename":"popup.js","previous":212,"size":212,"diff":0},{"filename":"contentScript.js","previous":512,"size":925,"diff":413},{"filename":"background.js","previous":4508,"size":4333,"diff":-175},{"filename":"popup.html","previous":373,"size":373,"diff":0}]},{"timestamp":1721724114264,"files":[{"filename":"popup.js","previous":208,"size":212,"diff":4},{"filename":"contentScript.js","previous":512,"size":512,"diff":0},{"filename":"background.js","previous":4508,"size":4508,"diff":0},{"filename":"popup.html","previous":373,"size":373,"diff":0}]},{"timestamp":1721723943181,"files":[{"filename":"popup.js","previous":212,"size":208,"diff":-4},{"filename":"contentScript.js","previous":4077,"size":512,"diff":-3565},{"filename":"background.js","previous":238,"size":4508,"diff":4270},{"filename":"popup.html","previous":373,"size":373,"diff":0}]},{"timestamp":1721723355554,"files":[{"filename":"popup.js","previous":212,"size":212,"diff":0},{"filename":"contentScript.js","previous":4080,"size":4077,"diff":-3},{"filename":"background.js","previous":238,"size":238,"diff":0},{"filename":"popup.html","previous":373,"size":373,"diff":0}]},{"timestamp":1721723229958,"files":[{"filename":"popup.js","previous":212,"size":212,"diff":0},{"filename":"contentScript.js","previous":4077,"size":4080,"diff":3},{"filename":"background.js","previous":238,"size":238,"diff":0},{"filename":"popup.html","previous":373,"size":373,"diff":0}]},{"timestamp":1721723043287,"files":[{"filename":"popup.js","previous":523,"size":212,"diff":-311},{"filename":"contentScript.js","previous":4077,"size":4077,"diff":0},{"filename":"background.js","previous":348,"size":238,"diff":-110},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":661,"size":0,"diff":-661}]},{"timestamp":1721675754133,"files":[{"filename":"popup.js","previous":523,"size":523,"diff":0},{"filename":"contentScript.js","previous":4885,"size":4077,"diff":-808},{"filename":"background.js","previous":348,"size":348,"diff":0},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":661,"size":661,"diff":0}]},{"timestamp":1721674784786,"files":[{"filename":"popup.js","previous":523,"size":523,"diff":0},{"filename":"contentScript.js","previous":1036,"size":4885,"diff":3849},{"filename":"background.js","previous":348,"size":348,"diff":0},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":661,"size":661,"diff":0}]},{"timestamp":1721673913927,"files":[{"filename":"popup.js","previous":523,"size":523,"diff":0},{"filename":"contentScript.js","previous":891,"size":1036,"diff":145},{"filename":"background.js","previous":348,"size":348,"diff":0},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":661,"size":661,"diff":0}]},{"timestamp":1721673612620,"files":[{"filename":"popup.js","previous":523,"size":523,"diff":0},{"filename":"contentScript.js","previous":535,"size":891,"diff":356},{"filename":"background.js","previous":348,"size":348,"diff":0},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":661,"size":661,"diff":0}]},{"timestamp":1721673532108,"files":[{"filename":"popup.js","previous":523,"size":523,"diff":0},{"filename":"contentScript.js","previous":824,"size":535,"diff":-289},{"filename":"background.js","previous":348,"size":348,"diff":0},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":661,"size":661,"diff":0}]},{"timestamp":1721673418860,"files":[{"filename":"popup.js","previous":523,"size":523,"diff":0},{"filename":"contentScript.js","previous":799,"size":824,"diff":25},{"filename":"background.js","previous":348,"size":348,"diff":0},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":661,"size":661,"diff":0}]},{"timestamp":1721673147533,"files":[{"filename":"popup.js","previous":523,"size":523,"diff":0},{"filename":"contentScript.js","previous":535,"size":799,"diff":264},{"filename":"background.js","previous":348,"size":348,"diff":0},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":661,"size":661,"diff":0}]},{"timestamp":1721672765798,"files":[{"filename":"popup.js","previous":523,"size":523,"diff":0},{"filename":"contentScript.js","previous":535,"size":535,"diff":0},{"filename":"background.js","previous":402,"size":348,"diff":-54},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":661,"size":661,"diff":0}]},{"timestamp":1721672679839,"files":[{"filename":"popup.js","previous":523,"size":523,"diff":0},{"filename":"contentScript.js","previous":535,"size":535,"diff":0},{"filename":"background.js","previous":348,"size":402,"diff":54},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":661,"size":661,"diff":0}]},{"timestamp":1721672515133,"files":[{"filename":"popup.js","previous":523,"size":523,"diff":0},{"filename":"contentScript.js","previous":535,"size":535,"diff":0},{"filename":"background.js","previous":241,"size":348,"diff":107},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":661,"size":661,"diff":0}]},{"timestamp":1721672448361,"files":[{"filename":"popup.js","previous":523,"size":523,"diff":0},{"filename":"contentScript.js","previous":535,"size":535,"diff":0},{"filename":"background.js","previous":348,"size":241,"diff":-107},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":661,"size":661,"diff":0}]},{"timestamp":1721672211969,"files":[{"filename":"popup.js","previous":523,"size":523,"diff":0},{"filename":"contentScript.js","previous":550,"size":535,"diff":-15},{"filename":"background.js","previous":348,"size":348,"diff":0},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":661,"size":661,"diff":0}]},{"timestamp":1721672169465,"files":[{"filename":"popup.js","previous":523,"size":523,"diff":0},{"filename":"contentScript.js","previous":877,"size":550,"diff":-327},{"filename":"background.js","previous":348,"size":348,"diff":0},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":661,"size":661,"diff":0}]},{"timestamp":1721672085540,"files":[{"filename":"popup.js","previous":523,"size":523,"diff":0},{"filename":"contentScript.js","previous":468,"size":877,"diff":409},{"filename":"background.js","previous":348,"size":348,"diff":0},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":661,"size":661,"diff":0}]},{"timestamp":1721671914291,"files":[{"filename":"popup.js","previous":523,"size":523,"diff":0},{"filename":"contentScript.js","previous":775,"size":468,"diff":-307},{"filename":"background.js","previous":348,"size":348,"diff":0},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":661,"size":661,"diff":0}]},{"timestamp":1721671786032,"files":[{"filename":"popup.js","previous":523,"size":523,"diff":0},{"filename":"contentScript.js","previous":535,"size":775,"diff":240},{"filename":"background.js","previous":348,"size":348,"diff":0},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":661,"size":661,"diff":0}]},{"timestamp":1721671372575,"files":[{"filename":"popup.js","previous":523,"size":523,"diff":0},{"filename":"contentScript.js","previous":550,"size":535,"diff":-15},{"filename":"background.js","previous":348,"size":348,"diff":0},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":661,"size":661,"diff":0}]},{"timestamp":1721671270544,"files":[{"filename":"popup.js","previous":523,"size":523,"diff":0},{"filename":"contentScript.js","previous":492,"size":550,"diff":58},{"filename":"background.js","previous":348,"size":348,"diff":0},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":661,"size":661,"diff":0}]},{"timestamp":1721671151106,"files":[{"filename":"popup.js","previous":523,"size":523,"diff":0},{"filename":"contentScript.js","previous":492,"size":492,"diff":0},{"filename":"background.js","previous":241,"size":348,"diff":107},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":661,"size":661,"diff":0}]},{"timestamp":1721670919743,"files":[{"filename":"popup.js","previous":487,"size":523,"diff":36},{"filename":"contentScript.js","previous":492,"size":492,"diff":0},{"filename":"background.js","previous":241,"size":241,"diff":0},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":661,"size":661,"diff":0}]},{"timestamp":1721670682442,"files":[{"filename":"popup.js","previous":740,"size":487,"diff":-253},{"filename":"contentScript.js","previous":655,"size":492,"diff":-163},{"filename":"background.js","previous":241,"size":241,"diff":0},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":661,"size":661,"diff":0}]},{"timestamp":1721670349290,"files":[{"filename":"popup.js","previous":233,"size":740,"diff":507},{"filename":"contentScript.js","previous":506,"size":655,"diff":149},{"filename":"background.js","previous":211,"size":241,"diff":30},{"filename":"popup.html","previous":373,"size":373,"diff":0},{"filename":"popup.css","previous":0,"size":661,"diff":661}]},{"timestamp":1721670245057,"files":[{"filename":"popup.js","previous":233,"size":233,"diff":0},{"filename":"contentScript.js","previous":507,"size":506,"diff":-1},{"filename":"background.js","previous":211,"size":211,"diff":0},{"filename":"popup.html","previous":373,"size":373,"diff":0}]},{"timestamp":1721669969867,"files":[{"filename":"popup.css","previous":661,"size":0,"diff":-661},{"filename":"popup.js","previous":740,"size":233,"diff":-507},{"filename":"contentScript.js","previous":695,"size":507,"diff":-188},{"filename":"background.js","previous":241,"size":211,"diff":-30},{"filename":"popup.html","previous":443,"size":373,"diff":-70}]},{"timestamp":1721669551539,"files":[{"filename":"popup.css","previous":661,"size":661,"diff":0},{"filename":"popup.js","previous":740,"size":740,"diff":0},{"filename":"contentScript.js","previous":354,"size":695,"diff":341},{"filename":"background.js","previous":241,"size":241,"diff":0},{"filename":"popup.html","previous":443,"size":443,"diff":0}]},{"timestamp":1721669049300,"files":[{"filename":"popup.css","previous":0,"size":661,"diff":661},{"filename":"popup.js","previous":0,"size":740,"diff":740},{"filename":"contentScript.js","previous":0,"size":354,"diff":354},{"filename":"background.js","previous":0,"size":241,"diff":241},{"filename":"popup.html","previous":0,"size":443,"diff":443}]}]
+[
+  {
+    "timestamp": 1721834329501,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 276, "diff": -16 },
+      {
+        "filename": "contentScript.js",
+        "previous": 803,
+        "size": 914,
+        "diff": 111
+      },
+      {
+        "filename": "background.js",
+        "previous": 4388,
+        "size": 4418,
+        "diff": 30
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721834124268,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 803,
+        "size": 803,
+        "diff": 0
+      },
+      {
+        "filename": "background.js",
+        "previous": 4380,
+        "size": 4388,
+        "diff": 8
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721833979399,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 811,
+        "size": 803,
+        "diff": -8
+      },
+      {
+        "filename": "background.js",
+        "previous": 4380,
+        "size": 4380,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721833765767,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 1003,
+        "size": 811,
+        "diff": -192
+      },
+      {
+        "filename": "background.js",
+        "previous": 4380,
+        "size": 4380,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721833480406,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 929,
+        "size": 1003,
+        "diff": 74
+      },
+      {
+        "filename": "background.js",
+        "previous": 4380,
+        "size": 4380,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721833262855,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 895,
+        "size": 929,
+        "diff": 34
+      },
+      {
+        "filename": "background.js",
+        "previous": 4380,
+        "size": 4380,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721833227232,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 932,
+        "size": 895,
+        "diff": -37
+      },
+      {
+        "filename": "background.js",
+        "previous": 4380,
+        "size": 4380,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721833072365,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 940,
+        "size": 932,
+        "diff": -8
+      },
+      {
+        "filename": "background.js",
+        "previous": 4380,
+        "size": 4380,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721832953840,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 944,
+        "size": 940,
+        "diff": -4
+      },
+      {
+        "filename": "background.js",
+        "previous": 4380,
+        "size": 4380,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721832736697,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 950,
+        "size": 944,
+        "diff": -6
+      },
+      {
+        "filename": "background.js",
+        "previous": 4380,
+        "size": 4380,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721832101269,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 916,
+        "size": 950,
+        "diff": 34
+      },
+      {
+        "filename": "background.js",
+        "previous": 4386,
+        "size": 4380,
+        "diff": -6
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721831503699,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 938,
+        "size": 916,
+        "diff": -22
+      },
+      {
+        "filename": "background.js",
+        "previous": 4386,
+        "size": 4386,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721831398576,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 916,
+        "size": 938,
+        "diff": 22
+      },
+      {
+        "filename": "background.js",
+        "previous": 4386,
+        "size": 4386,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721831213137,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 914,
+        "size": 916,
+        "diff": 2
+      },
+      {
+        "filename": "background.js",
+        "previous": 4386,
+        "size": 4386,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721831160356,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 869,
+        "size": 914,
+        "diff": 45
+      },
+      {
+        "filename": "background.js",
+        "previous": 4386,
+        "size": 4386,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721831021761,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 904,
+        "size": 869,
+        "diff": -35
+      },
+      {
+        "filename": "background.js",
+        "previous": 4386,
+        "size": 4386,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721830947132,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 906,
+        "size": 904,
+        "diff": -2
+      },
+      {
+        "filename": "background.js",
+        "previous": 4386,
+        "size": 4386,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721830802751,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 963,
+        "size": 906,
+        "diff": -57
+      },
+      {
+        "filename": "background.js",
+        "previous": 4386,
+        "size": 4386,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721830654580,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 980,
+        "size": 963,
+        "diff": -17
+      },
+      {
+        "filename": "background.js",
+        "previous": 4386,
+        "size": 4386,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721830320908,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 932,
+        "size": 980,
+        "diff": 48
+      },
+      {
+        "filename": "background.js",
+        "previous": 4386,
+        "size": 4386,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721830124833,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 561,
+        "size": 932,
+        "diff": 371
+      },
+      {
+        "filename": "background.js",
+        "previous": 4386,
+        "size": 4386,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721829796855,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 816,
+        "size": 561,
+        "diff": -255
+      },
+      {
+        "filename": "background.js",
+        "previous": 4386,
+        "size": 4386,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721828737057,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 1043,
+        "size": 816,
+        "diff": -227
+      },
+      {
+        "filename": "background.js",
+        "previous": 4386,
+        "size": 4386,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721828282007,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 1012,
+        "size": 1043,
+        "diff": 31
+      },
+      {
+        "filename": "background.js",
+        "previous": 4386,
+        "size": 4386,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721828218469,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 963,
+        "size": 1012,
+        "diff": 49
+      },
+      {
+        "filename": "background.js",
+        "previous": 4386,
+        "size": 4386,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721828097905,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 952,
+        "size": 963,
+        "diff": 11
+      },
+      {
+        "filename": "background.js",
+        "previous": 4364,
+        "size": 4386,
+        "diff": 22
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721827934799,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 904,
+        "size": 952,
+        "diff": 48
+      },
+      {
+        "filename": "background.js",
+        "previous": 4364,
+        "size": 4364,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721827849365,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 865,
+        "size": 904,
+        "diff": 39
+      },
+      {
+        "filename": "background.js",
+        "previous": 4364,
+        "size": 4364,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721827407350,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 864,
+        "size": 865,
+        "diff": 1
+      },
+      {
+        "filename": "background.js",
+        "previous": 4364,
+        "size": 4364,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721827160152,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 922,
+        "size": 864,
+        "diff": -58
+      },
+      {
+        "filename": "background.js",
+        "previous": 4336,
+        "size": 4364,
+        "diff": 28
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721733393967,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 925,
+        "size": 922,
+        "diff": -3
+      },
+      {
+        "filename": "background.js",
+        "previous": 4336,
+        "size": 4336,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721733214253,
+    "files": [
+      { "filename": "popup.js", "previous": 292, "size": 292, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 925,
+        "size": 925,
+        "diff": 0
+      },
+      {
+        "filename": "background.js",
+        "previous": 4333,
+        "size": 4336,
+        "diff": 3
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721729377714,
+    "files": [
+      { "filename": "popup.js", "previous": 308, "size": 292, "diff": -16 },
+      {
+        "filename": "contentScript.js",
+        "previous": 925,
+        "size": 925,
+        "diff": 0
+      },
+      {
+        "filename": "background.js",
+        "previous": 4333,
+        "size": 4333,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 234, "size": 253, "diff": 19 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721727371733,
+    "files": [
+      { "filename": "popup.js", "previous": 308, "size": 308, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 925,
+        "size": 925,
+        "diff": 0
+      },
+      {
+        "filename": "background.js",
+        "previous": 4333,
+        "size": 4333,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 253, "size": 234, "diff": -19 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721727227491,
+    "files": [
+      { "filename": "popup.js", "previous": 308, "size": 308, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 1019,
+        "size": 925,
+        "diff": -94
+      },
+      {
+        "filename": "background.js",
+        "previous": 4343,
+        "size": 4333,
+        "diff": -10
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721726946187,
+    "files": [
+      { "filename": "popup.js", "previous": 308, "size": 308, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 1025,
+        "size": 1019,
+        "diff": -6
+      },
+      {
+        "filename": "background.js",
+        "previous": 4333,
+        "size": 4343,
+        "diff": 10
+      },
+      { "filename": "popup.html", "previous": 253, "size": 253, "diff": 0 },
+      { "filename": "styles.css", "previous": 231, "size": 231, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721726248308,
+    "files": [
+      { "filename": "popup.js", "previous": 308, "size": 308, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 1025,
+        "size": 1025,
+        "diff": 0
+      },
+      {
+        "filename": "background.js",
+        "previous": 4333,
+        "size": 4333,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 230, "size": 253, "diff": 23 },
+      { "filename": "styles.css", "previous": 0, "size": 231, "diff": 231 }
+    ]
+  },
+  {
+    "timestamp": 1721725979169,
+    "files": [
+      { "filename": "popup.js", "previous": 212, "size": 308, "diff": 96 },
+      {
+        "filename": "contentScript.js",
+        "previous": 925,
+        "size": 1025,
+        "diff": 100
+      },
+      {
+        "filename": "background.js",
+        "previous": 4333,
+        "size": 4333,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 373, "size": 230, "diff": -143 }
+    ]
+  },
+  {
+    "timestamp": 1721724660589,
+    "files": [
+      { "filename": "popup.js", "previous": 212, "size": 212, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 512,
+        "size": 925,
+        "diff": 413
+      },
+      {
+        "filename": "background.js",
+        "previous": 4508,
+        "size": 4333,
+        "diff": -175
+      },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721724114264,
+    "files": [
+      { "filename": "popup.js", "previous": 208, "size": 212, "diff": 4 },
+      {
+        "filename": "contentScript.js",
+        "previous": 512,
+        "size": 512,
+        "diff": 0
+      },
+      {
+        "filename": "background.js",
+        "previous": 4508,
+        "size": 4508,
+        "diff": 0
+      },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721723943181,
+    "files": [
+      { "filename": "popup.js", "previous": 212, "size": 208, "diff": -4 },
+      {
+        "filename": "contentScript.js",
+        "previous": 4077,
+        "size": 512,
+        "diff": -3565
+      },
+      {
+        "filename": "background.js",
+        "previous": 238,
+        "size": 4508,
+        "diff": 4270
+      },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721723355554,
+    "files": [
+      { "filename": "popup.js", "previous": 212, "size": 212, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 4080,
+        "size": 4077,
+        "diff": -3
+      },
+      { "filename": "background.js", "previous": 238, "size": 238, "diff": 0 },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721723229958,
+    "files": [
+      { "filename": "popup.js", "previous": 212, "size": 212, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 4077,
+        "size": 4080,
+        "diff": 3
+      },
+      { "filename": "background.js", "previous": 238, "size": 238, "diff": 0 },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721723043287,
+    "files": [
+      { "filename": "popup.js", "previous": 523, "size": 212, "diff": -311 },
+      {
+        "filename": "contentScript.js",
+        "previous": 4077,
+        "size": 4077,
+        "diff": 0
+      },
+      {
+        "filename": "background.js",
+        "previous": 348,
+        "size": 238,
+        "diff": -110
+      },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 661, "size": 0, "diff": -661 }
+    ]
+  },
+  {
+    "timestamp": 1721675754133,
+    "files": [
+      { "filename": "popup.js", "previous": 523, "size": 523, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 4885,
+        "size": 4077,
+        "diff": -808
+      },
+      { "filename": "background.js", "previous": 348, "size": 348, "diff": 0 },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 661, "size": 661, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721674784786,
+    "files": [
+      { "filename": "popup.js", "previous": 523, "size": 523, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 1036,
+        "size": 4885,
+        "diff": 3849
+      },
+      { "filename": "background.js", "previous": 348, "size": 348, "diff": 0 },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 661, "size": 661, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721673913927,
+    "files": [
+      { "filename": "popup.js", "previous": 523, "size": 523, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 891,
+        "size": 1036,
+        "diff": 145
+      },
+      { "filename": "background.js", "previous": 348, "size": 348, "diff": 0 },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 661, "size": 661, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721673612620,
+    "files": [
+      { "filename": "popup.js", "previous": 523, "size": 523, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 535,
+        "size": 891,
+        "diff": 356
+      },
+      { "filename": "background.js", "previous": 348, "size": 348, "diff": 0 },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 661, "size": 661, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721673532108,
+    "files": [
+      { "filename": "popup.js", "previous": 523, "size": 523, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 824,
+        "size": 535,
+        "diff": -289
+      },
+      { "filename": "background.js", "previous": 348, "size": 348, "diff": 0 },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 661, "size": 661, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721673418860,
+    "files": [
+      { "filename": "popup.js", "previous": 523, "size": 523, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 799,
+        "size": 824,
+        "diff": 25
+      },
+      { "filename": "background.js", "previous": 348, "size": 348, "diff": 0 },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 661, "size": 661, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721673147533,
+    "files": [
+      { "filename": "popup.js", "previous": 523, "size": 523, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 535,
+        "size": 799,
+        "diff": 264
+      },
+      { "filename": "background.js", "previous": 348, "size": 348, "diff": 0 },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 661, "size": 661, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721672765798,
+    "files": [
+      { "filename": "popup.js", "previous": 523, "size": 523, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 535,
+        "size": 535,
+        "diff": 0
+      },
+      {
+        "filename": "background.js",
+        "previous": 402,
+        "size": 348,
+        "diff": -54
+      },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 661, "size": 661, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721672679839,
+    "files": [
+      { "filename": "popup.js", "previous": 523, "size": 523, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 535,
+        "size": 535,
+        "diff": 0
+      },
+      { "filename": "background.js", "previous": 348, "size": 402, "diff": 54 },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 661, "size": 661, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721672515133,
+    "files": [
+      { "filename": "popup.js", "previous": 523, "size": 523, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 535,
+        "size": 535,
+        "diff": 0
+      },
+      {
+        "filename": "background.js",
+        "previous": 241,
+        "size": 348,
+        "diff": 107
+      },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 661, "size": 661, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721672448361,
+    "files": [
+      { "filename": "popup.js", "previous": 523, "size": 523, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 535,
+        "size": 535,
+        "diff": 0
+      },
+      {
+        "filename": "background.js",
+        "previous": 348,
+        "size": 241,
+        "diff": -107
+      },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 661, "size": 661, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721672211969,
+    "files": [
+      { "filename": "popup.js", "previous": 523, "size": 523, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 550,
+        "size": 535,
+        "diff": -15
+      },
+      { "filename": "background.js", "previous": 348, "size": 348, "diff": 0 },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 661, "size": 661, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721672169465,
+    "files": [
+      { "filename": "popup.js", "previous": 523, "size": 523, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 877,
+        "size": 550,
+        "diff": -327
+      },
+      { "filename": "background.js", "previous": 348, "size": 348, "diff": 0 },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 661, "size": 661, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721672085540,
+    "files": [
+      { "filename": "popup.js", "previous": 523, "size": 523, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 468,
+        "size": 877,
+        "diff": 409
+      },
+      { "filename": "background.js", "previous": 348, "size": 348, "diff": 0 },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 661, "size": 661, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721671914291,
+    "files": [
+      { "filename": "popup.js", "previous": 523, "size": 523, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 775,
+        "size": 468,
+        "diff": -307
+      },
+      { "filename": "background.js", "previous": 348, "size": 348, "diff": 0 },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 661, "size": 661, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721671786032,
+    "files": [
+      { "filename": "popup.js", "previous": 523, "size": 523, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 535,
+        "size": 775,
+        "diff": 240
+      },
+      { "filename": "background.js", "previous": 348, "size": 348, "diff": 0 },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 661, "size": 661, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721671372575,
+    "files": [
+      { "filename": "popup.js", "previous": 523, "size": 523, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 550,
+        "size": 535,
+        "diff": -15
+      },
+      { "filename": "background.js", "previous": 348, "size": 348, "diff": 0 },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 661, "size": 661, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721671270544,
+    "files": [
+      { "filename": "popup.js", "previous": 523, "size": 523, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 492,
+        "size": 550,
+        "diff": 58
+      },
+      { "filename": "background.js", "previous": 348, "size": 348, "diff": 0 },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 661, "size": 661, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721671151106,
+    "files": [
+      { "filename": "popup.js", "previous": 523, "size": 523, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 492,
+        "size": 492,
+        "diff": 0
+      },
+      {
+        "filename": "background.js",
+        "previous": 241,
+        "size": 348,
+        "diff": 107
+      },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 661, "size": 661, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721670919743,
+    "files": [
+      { "filename": "popup.js", "previous": 487, "size": 523, "diff": 36 },
+      {
+        "filename": "contentScript.js",
+        "previous": 492,
+        "size": 492,
+        "diff": 0
+      },
+      { "filename": "background.js", "previous": 241, "size": 241, "diff": 0 },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 661, "size": 661, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721670682442,
+    "files": [
+      { "filename": "popup.js", "previous": 740, "size": 487, "diff": -253 },
+      {
+        "filename": "contentScript.js",
+        "previous": 655,
+        "size": 492,
+        "diff": -163
+      },
+      { "filename": "background.js", "previous": 241, "size": 241, "diff": 0 },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 661, "size": 661, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721670349290,
+    "files": [
+      { "filename": "popup.js", "previous": 233, "size": 740, "diff": 507 },
+      {
+        "filename": "contentScript.js",
+        "previous": 506,
+        "size": 655,
+        "diff": 149
+      },
+      { "filename": "background.js", "previous": 211, "size": 241, "diff": 30 },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 },
+      { "filename": "popup.css", "previous": 0, "size": 661, "diff": 661 }
+    ]
+  },
+  {
+    "timestamp": 1721670245057,
+    "files": [
+      { "filename": "popup.js", "previous": 233, "size": 233, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 507,
+        "size": 506,
+        "diff": -1
+      },
+      { "filename": "background.js", "previous": 211, "size": 211, "diff": 0 },
+      { "filename": "popup.html", "previous": 373, "size": 373, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721669969867,
+    "files": [
+      { "filename": "popup.css", "previous": 661, "size": 0, "diff": -661 },
+      { "filename": "popup.js", "previous": 740, "size": 233, "diff": -507 },
+      {
+        "filename": "contentScript.js",
+        "previous": 695,
+        "size": 507,
+        "diff": -188
+      },
+      {
+        "filename": "background.js",
+        "previous": 241,
+        "size": 211,
+        "diff": -30
+      },
+      { "filename": "popup.html", "previous": 443, "size": 373, "diff": -70 }
+    ]
+  },
+  {
+    "timestamp": 1721669551539,
+    "files": [
+      { "filename": "popup.css", "previous": 661, "size": 661, "diff": 0 },
+      { "filename": "popup.js", "previous": 740, "size": 740, "diff": 0 },
+      {
+        "filename": "contentScript.js",
+        "previous": 354,
+        "size": 695,
+        "diff": 341
+      },
+      { "filename": "background.js", "previous": 241, "size": 241, "diff": 0 },
+      { "filename": "popup.html", "previous": 443, "size": 443, "diff": 0 }
+    ]
+  },
+  {
+    "timestamp": 1721669049300,
+    "files": [
+      { "filename": "popup.css", "previous": 0, "size": 661, "diff": 661 },
+      { "filename": "popup.js", "previous": 0, "size": 740, "diff": 740 },
+      {
+        "filename": "contentScript.js",
+        "previous": 0,
+        "size": 354,
+        "diff": 354
+      },
+      { "filename": "background.js", "previous": 0, "size": 241, "diff": 241 },
+      { "filename": "popup.html", "previous": 0, "size": 443, "diff": 443 }
+    ]
+  }
+]

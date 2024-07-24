@@ -1,10 +1,15 @@
 let mediaRecorder = null;
 let stream = null;
-let audioChunks = [];
 let recognition = null;
-let audioName = "recording";
 
-// Function to start recording
+function updatePopupStatus(message) {
+  chrome.runtime.sendMessage({ msg: "update-status", status: message });
+}
+
+function updatePopupResult(result) {
+  chrome.runtime.sendMessage({ msg: "update-result", result: result });
+}
+
 function startRecording() {
   console.log("Content script startRecording function called");
   if (mediaRecorder) {
@@ -19,129 +24,101 @@ function startRecording() {
         autoGainControl: true,
         echoCancellation: false,
         noiseSuppression: false,
-        sampleRate: 44100,
-        sampleSize: 16,
       },
     })
     .then((userStream) => {
       stream = userStream;
-      mediaRecorder = new MediaRecorder(stream, { mimeType: "audio/webm" });
-      console.log("Content script mediaRecorder created");
-      mediaRecorder.addEventListener("dataavailable", (event) => {
-        console.log("Content script pusing audio chunk: ", event.data);
-        audioChunks.push(event.data);
+      const audioContext = new (window.AudioContext ||
+        window.webkitAudioContext)();
+      const source = audioContext.createMediaStreamSource(stream);
+
+      // Create a gain node to increase the volume
+      const gainNode = audioContext.createGain();
+      gainNode.gain.value = 1; // Increase the gain (1 means normal volume)
+
+      source.connect(gainNode);
+      const destination = audioContext.createMediaStreamDestination();
+      gainNode.connect(destination);
+
+      mediaRecorder = new MediaRecorder(destination.stream, {
+        mimeType: "audio/webm",
       });
 
-      mediaRecorder.addEventListener("stop", () => {
+      mediaRecorder.addEventListener("dataavailable", (event) => {
+        const audioChunks = [event.data];
         const blob = new Blob(audioChunks, { type: "audio/webm" });
-        console.log("Content script audioChunks:", audioChunks);
-        console.log("Content script blob: ", blob);
-        console.log("Content script mediaRecorder stopped and blob created");
-        const reader = new FileReader();
-        reader.onloadend = function () {
-          const dataUrl = reader.result;
-          chrome.runtime.sendMessage({
-            msg: "process-audio",
-            dataUrl: dataUrl,
-          });
-        };
-        reader.readAsDataURL(blob);
-        //processAudio(blob);
-        // const url = URL.createObjectURL(blob);
-        // const a = document.createElement("a");
-        // a.style = "display: none";
-        // a.href = url;
-        // a.download = document.title + ".webm";
-        // document.body.appendChild(a);
-        // a.click();
-        // URL.revokeObjectURL(url);
-        // sendAudioToServer(blob, audioName); // Uncomment if needed
+        console.log("Recording stopped:", blob);
       });
 
       mediaRecorder.start();
-      console.log("Content script mediaRecorder started");
+      console.log("Recording started");
+      updatePopupStatus("Recording started");
+
+      // Start Speech Recognition
+      startSpeechRecognition();
     })
     .catch((error) => {
-      console.error("Content script Error accessing microphone:", error);
+      console.error("Error accessing microphone:", error);
+      updatePopupStatus("Error accessing microphone: " + error.message);
     });
 }
 
-// async function processAudio(blob) {
-//   try {
-//     const audioContext = new (window.AudioContext ||
-//       window.webkitAudioContext)();
-
-//     const arrayBuffer = await blob.arrayBuffer();
-//     const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
-
-//     const source = audioContext.createBufferSource();
-//     source.buffer = audioBuffer;
-//     source.connect(audioContext.destination);
-
-//     if (
-//       !("SpeechRecognition" in window || "webkitSpeechRecognition" in window)
-//     ) {
-//       console.error("Speech Recognition API is not supported.");
-//       return;
-//     }
-
-//     if (recognition) {
-//       recognition.abort();
-//     }
-
-//     recognition = new (window.SpeechRecognition ||
-//       window.webkitSpeechRecognition)();
-//     console.log(recognition);
-//     recognition.lang = "pl-PL";
-//     recognition.interimResults = false;
-
-//     recognition.onresult = async function (event) {
-//       const text = event.results[0][0].transcript;
-//       console.log("Recognized Polish Text:", text);
-
-//       // Send message to background script for translation
-//       chrome.runtime.sendMessage(
-//         { msg: "translate-text", text: text },
-//         (response) => {
-//           if (response.translatedText) {
-//             console.log("Translated Text:", response.translatedText);
-//             // Do something with the translated text
-//           } else if (response.error) {
-//             console.error(
-//               "Translation Error:",
-//               response.error,
-//               response.details
-//             );
-//           }
-//         }
-//       );
-//     };
-
-//     recognition.onerror = function (event) {
-//       console.error("Speech recognition error:", event.error);
-//     };
-
-//     recognition.onend = function () {
-//       console.log("Speech recognition ended");
-//       recognition = null;
-//     };
-
-//     recognition.start();
-//     source.start(0);
-//   } catch (error) {
-//     console.error("Error processing audio:", error);
-//   }
-// }
-
 function stopRecording() {
-  console.log("Content script stopRecording function called");
   if (mediaRecorder) {
-    console.log("Content script stopping recording");
+    console.log("Stopping recording...");
     mediaRecorder.stop();
     stream.getTracks().forEach((track) => track.stop());
     mediaRecorder = null;
-    audioChunks = [];
+    updatePopupStatus("Recording stopped");
   }
+
+  if (recognition) {
+    recognition.stop();
+  }
+}
+
+function startSpeechRecognition() {
+  if (!("SpeechRecognition" in window || "webkitSpeechRecognition" in window)) {
+    console.error("Speech Recognition API is not supported.");
+    updatePopupStatus("Speech Recognition API is not supported.");
+    return;
+  }
+
+  recognition = new (window.SpeechRecognition ||
+    window.webkitSpeechRecognition)();
+  recognition.lang = "pl-PL";
+  recognition.interimResults = false;
+
+  recognition.onresult = function (event) {
+    const text = event.results[0][0].transcript;
+    console.log("Recognized Polish Text:", text);
+    updatePopupResult("Recognized Polish Text: " + text);
+
+    // Send message to background script for translation
+    chrome.runtime.sendMessage(
+      { msg: "translate-text", text: text },
+      (response) => {
+        if (response.translatedText) {
+          console.log("Translated Text:", response.translatedText);
+          updatePopupResult("Translated Text: " + response.translatedText);
+        } else if (response.error) {
+          console.error("Translation Error:", response.error, response.details);
+          updatePopupResult("Translation Error: " + response.error);
+        }
+      }
+    );
+  };
+
+  recognition.onerror = function (event) {
+    console.error("Speech recognition error:", event.error);
+    updatePopupStatus("Speech recognition error: " + event.error);
+  };
+
+  recognition.onend = function () {
+    recognition = null;
+  };
+
+  recognition.start();
 }
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {

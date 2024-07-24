@@ -10,4 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log(response.response);
     });
   });
+
+  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.msg === "update-status") {
+      document.getElementById("status").innerText = request.status;
+    } else if (request.msg === "update-result") {
+      document.getElementById("result").innerText = request.result;
+    }
+  });
 });
