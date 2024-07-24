@@ -10,4 +10,4 @@
 npm-debug.log*
 
 # Size reporting
-size-plugin.json
+/size-plugin.json
