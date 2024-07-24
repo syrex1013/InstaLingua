@@ -6,8 +6,13 @@
 
 # misc
 .DS_Store
-
 npm-debug.log*
 
 # Size reporting
 /size-plugin.json
+
+# VSCode settings
+.vscode/
+
+# Webpack cache
+/.cache
