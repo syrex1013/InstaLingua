@@ -12,11 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    if (request.type === "update-status") {
-      document.getElementById("status").textContent = request.data;
-    } else if (request.type === "update-result") {
-      document.getElementById("result").textContent = request.data;
-      document.getElementById("status").textContent = "Translation complete.";
+    if (request.msg === "update-status") {
+      document.getElementById("status").innerText = request.status;
+    } else if (request.msg === "update-result") {
+      document.getElementById("result").innerText = request.result;
     }
   });
 });

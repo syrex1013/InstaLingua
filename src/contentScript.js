@@ -1,10 +1,15 @@
-// contentScript.js
 let mediaRecorder = null;
 let stream = null;
-let audioChunks = [];
 let recognition = null;
 
-// Function to start recording
+function updatePopupStatus(message) {
+  chrome.runtime.sendMessage({ msg: "update-status", status: message });
+}
+
+function updatePopupResult(result) {
+  chrome.runtime.sendMessage({ msg: "update-result", result: result });
+}
+
 function startRecording() {
   if (mediaRecorder) {
     console.log("Recording already in progress.");
@@ -12,127 +17,109 @@ function startRecording() {
   }
 
   navigator.mediaDevices
-    .getUserMedia({ audio: true })
+    .getUserMedia({
+      audio: {
+        channels: 2,
+        autoGainControl: true,
+        echoCancellation: false,
+        noiseSuppression: false,
+      },
+    })
     .then((userStream) => {
       stream = userStream;
-      mediaRecorder = new MediaRecorder(stream, { mimeType: "audio/webm" });
+      const audioContext = new (window.AudioContext ||
+        window.webkitAudioContext)();
+      const source = audioContext.createMediaStreamSource(stream);
 
-      mediaRecorder.addEventListener("dataavailable", (event) => {
-        audioChunks.push(event.data);
+      // Create a gain node to increase the volume
+      const gainNode = audioContext.createGain();
+      gainNode.gain.value = 1; // Increase the gain (1 means normal volume)
+
+      source.connect(gainNode);
+      const destination = audioContext.createMediaStreamDestination();
+      gainNode.connect(destination);
+
+      mediaRecorder = new MediaRecorder(destination.stream, {
+        mimeType: "audio/webm",
       });
 
-      mediaRecorder.addEventListener("stop", () => {
+      mediaRecorder.addEventListener("dataavailable", (event) => {
+        const audioChunks = [event.data];
         const blob = new Blob(audioChunks, { type: "audio/webm" });
-        processAudio(blob);
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.style = "display: none";
-        a.href = url;
-        a.download = document.title + ".webm";
-        document.body.appendChild(a);
-        a.click();
-        URL.revokeObjectURL(url);
+        console.log("Recording stopped:", blob);
       });
 
       mediaRecorder.start();
       console.log("Recording started");
+      updatePopupStatus("Recording started");
+
+      // Start Speech Recognition
+      startSpeechRecognition();
     })
     .catch((error) => {
       console.error("Error accessing microphone:", error);
+      updatePopupStatus("Error accessing microphone: " + error.message);
     });
 }
 
-async function processAudio(blob) {
-  try {
-    // Create an AudioContext
-    const audioContext = new (window.AudioContext ||
-      window.webkitAudioContext)();
+function stopRecording() {
+  if (mediaRecorder) {
+    console.log("Stopping recording...");
+    mediaRecorder.stop();
+    stream.getTracks().forEach((track) => track.stop());
+    mediaRecorder = null;
+    updatePopupStatus("Recording stopped");
+  }
 
-    // Convert blob to array buffer
-    const arrayBuffer = await blob.arrayBuffer();
-
-    // Decode audio data
-    const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
-
-    // Create a buffer source
-    const source = audioContext.createBufferSource();
-    source.buffer = audioBuffer;
-
-    // Connect the source to the audio context
-    source.connect(audioContext.destination);
-
-    // Use Web Speech API for speech-to-text
-    if (
-      !("SpeechRecognition" in window || "webkitSpeechRecognition" in window)
-    ) {
-      console.error("Speech Recognition API is not supported.");
-      return;
-    }
-
-    // Stop any previous recognition instance
-    if (recognition) {
-      recognition.abort();
-    }
-
-    recognition = new (window.SpeechRecognition ||
-      window.webkitSpeechRecognition)();
-    recognition.lang = "pl-PL";
-    recognition.interimResults = false;
-
-    recognition.onresult = async function (event) {
-      const text = event.results[0][0].transcript;
-      console.log("Recognized Polish Text:", text);
-
-      // Translate the text
-      const response = await new Promise((resolve, reject) => {
-        chrome.runtime.sendMessage(
-          { type: "translate-text", data: text },
-          (response) => {
-            resolve(response);
-          }
-        );
-      });
-      console.log("Translated English Text:", response);
-    };
-
-    recognition.onerror = function (event) {
-      console.error("Speech recognition error:", event.error);
-    };
-
-    recognition.onend = function () {
-      recognition = null;
-    };
-
-    recognition.start();
-
-    // Start playing the recorded audio
-    source.start(0);
-  } catch (error) {
-    console.error("Error processing audio:", error);
+  if (recognition) {
+    recognition.stop();
   }
 }
 
-// Function to stop recording
-function stopRecording() {
-  if (!mediaRecorder) {
-    console.log("No recording in progress.");
+function startSpeechRecognition() {
+  if (!("SpeechRecognition" in window || "webkitSpeechRecognition" in window)) {
+    console.error("Speech Recognition API is not supported.");
+    updatePopupStatus("Speech Recognition API is not supported.");
     return;
   }
 
-  mediaRecorder.stop();
-  stream.getTracks().forEach((track) => track.stop());
-  mediaRecorder = null;
-  audioChunks = [];
+  recognition = new (window.SpeechRecognition ||
+    window.webkitSpeechRecognition)();
+  recognition.lang = "pl-PL";
+  recognition.interimResults = false;
 
-  // Stop any active speech recognition
-  if (recognition) {
-    recognition.abort();
-  }
+  recognition.onresult = function (event) {
+    const text = event.results[0][0].transcript;
+    console.log("Recognized Polish Text:", text);
+    updatePopupResult("Recognized Polish Text: " + text);
 
-  console.log("Recording stopped");
+    // Send message to background script for translation
+    chrome.runtime.sendMessage(
+      { msg: "translate-text", text: text },
+      (response) => {
+        if (response.translatedText) {
+          console.log("Translated Text:", response.translatedText);
+          updatePopupResult("Translated Text: " + response.translatedText);
+        } else if (response.error) {
+          console.error("Translation Error:", response.error, response.details);
+          updatePopupResult("Translation Error: " + response.error);
+        }
+      }
+    );
+  };
+
+  recognition.onerror = function (event) {
+    console.error("Speech recognition error:", event.error);
+    updatePopupStatus("Speech recognition error: " + event.error);
+  };
+
+  recognition.onend = function () {
+    recognition = null;
+  };
+
+  recognition.start();
 }
 
-// Listen for messages from background.js
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.msg === "start-record") {
     startRecording();
