@@ -94,13 +94,16 @@ function startSpeechRecognition() {
     console.log("Recognized Polish Text:", text);
     updatePopupResult("Recognized Polish Text: " + text);
 
+    // Clear previous result and show loading message
+    updatePopupResult("Translating...");
+
     // Send message to background script for translation
     chrome.runtime.sendMessage(
       { msg: "translate-text", text: text },
       (response) => {
         if (response.translatedText) {
           console.log("Translated Text:", response.translatedText);
-          updatePopupResult("Translated Text: " + response.translatedText);
+          updatePopupResult(response.translatedText);
         } else if (response.error) {
           console.error("Translation Error:", response.error, response.details);
           updatePopupResult("Translation Error: " + response.error);

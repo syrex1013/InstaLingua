@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const copyBtn = document.getElementById("copy-btn");
   document.getElementById("start-record-btn").addEventListener("click", () => {
+    copyBtn.innerText = "Copy";
     chrome.runtime.sendMessage({ msg: "start-record" }, (response) => {
       console.log(response.response);
     });
@@ -17,5 +19,17 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (request.msg === "update-result") {
       document.getElementById("result").innerText = request.result;
     }
+  });
+
+  copyBtn.addEventListener("click", () => {
+    const resultText = document.getElementById("result").innerText;
+    navigator.clipboard
+      .writeText(resultText)
+      .then(() => {
+        copyBtn.innerText = "Copied!";
+      })
+      .catch((err) => {
+        console.error("Failed to copy: ", err);
+      });
   });
 });
