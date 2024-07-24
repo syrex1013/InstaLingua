@@ -1,8 +1,8 @@
-// contentScript.js
 let mediaRecorder = null;
 let stream = null;
 let audioChunks = [];
 let recognition = null;
+let audioName = "recording";
 
 // Function to start recording
 function startRecording() {
@@ -24,14 +24,15 @@ function startRecording() {
       mediaRecorder.addEventListener("stop", () => {
         const blob = new Blob(audioChunks, { type: "audio/webm" });
         processAudio(blob);
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.style = "display: none";
-        a.href = url;
-        a.download = document.title + ".webm";
-        document.body.appendChild(a);
-        a.click();
-        URL.revokeObjectURL(url);
+        // const url = URL.createObjectURL(blob);
+        // const a = document.createElement("a");
+        // a.style = "display: none";
+        // a.href = url;
+        // a.download = document.title + ".webm";
+        // document.body.appendChild(a);
+        // a.click();
+        // URL.revokeObjectURL(url);
+        // sendAudioToServer(blob, audioName); // Uncomment if needed
       });
 
       mediaRecorder.start();
@@ -44,24 +45,16 @@ function startRecording() {
 
 async function processAudio(blob) {
   try {
-    // Create an AudioContext
     const audioContext = new (window.AudioContext ||
       window.webkitAudioContext)();
 
-    // Convert blob to array buffer
     const arrayBuffer = await blob.arrayBuffer();
-
-    // Decode audio data
     const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
 
-    // Create a buffer source
     const source = audioContext.createBufferSource();
     source.buffer = audioBuffer;
-
-    // Connect the source to the audio context
     source.connect(audioContext.destination);
 
-    // Use Web Speech API for speech-to-text
     if (
       !("SpeechRecognition" in window || "webkitSpeechRecognition" in window)
     ) {
@@ -69,13 +62,13 @@ async function processAudio(blob) {
       return;
     }
 
-    // Stop any previous recognition instance
     if (recognition) {
       recognition.abort();
     }
 
     recognition = new (window.SpeechRecognition ||
       window.webkitSpeechRecognition)();
+    console.log(recognition);
     recognition.lang = "pl-PL";
     recognition.interimResults = false;
 
@@ -83,16 +76,22 @@ async function processAudio(blob) {
       const text = event.results[0][0].transcript;
       console.log("Recognized Polish Text:", text);
 
-      // Translate the text
-      const response = await new Promise((resolve, reject) => {
-        chrome.runtime.sendMessage(
-          { type: "translate-text", data: text },
-          (response) => {
-            resolve(response);
+      // Send message to background script for translation
+      chrome.runtime.sendMessage(
+        { msg: "translate-text", text: text },
+        (response) => {
+          if (response.translatedText) {
+            console.log("Translated Text:", response.translatedText);
+            // Do something with the translated text
+          } else if (response.error) {
+            console.error(
+              "Translation Error:",
+              response.error,
+              response.details
+            );
           }
-        );
-      });
-      console.log("Translated English Text:", response);
+        }
+      );
     };
 
     recognition.onerror = function (event) {
@@ -104,15 +103,12 @@ async function processAudio(blob) {
     };
 
     recognition.start();
-
-    // Start playing the recorded audio
     source.start(0);
   } catch (error) {
     console.error("Error processing audio:", error);
   }
 }
 
-// Function to stop recording
 function stopRecording() {
   if (!mediaRecorder) {
     console.log("No recording in progress.");
@@ -124,7 +120,6 @@ function stopRecording() {
   mediaRecorder = null;
   audioChunks = [];
 
-  // Stop any active speech recognition
   if (recognition) {
     recognition.abort();
   }
@@ -132,7 +127,6 @@ function stopRecording() {
   console.log("Recording stopped");
 }
 
-// Listen for messages from background.js
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.msg === "start-record") {
     startRecording();

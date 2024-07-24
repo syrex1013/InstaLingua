@@ -10,13 +10,4 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log(response.response);
     });
   });
-
-  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    if (request.type === "update-status") {
-      document.getElementById("status").textContent = request.data;
-    } else if (request.type === "update-result") {
-      document.getElementById("result").textContent = request.data;
-      document.getElementById("status").textContent = "Translation complete.";
-    }
-  });
 });
