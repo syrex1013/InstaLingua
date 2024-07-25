@@ -16,19 +16,11 @@
     "default_title": "InstaLingua",
     "default_popup": "popup.html"
   },
-  "permissions": [
-    "background",
-    "storage",
-    "activeTab",
-    "scripting",
-    "identity",
-    "webRequest"
-  ],
+  "permissions": ["background", "activeTab"],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["contentScript.js"]
     }
-  ],
-  "host_permissions": ["<all_urls>"]
+  ]
 }

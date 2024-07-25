@@ -1,4 +1,5 @@
 import { translate } from "google-translate-api-x";
+import { split } from 'sentence-splitter';
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.msg === "start-record" || request.msg === "stop-record") {
@@ -36,6 +37,26 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     chrome.runtime.sendMessage(request);
   }
 });
+function formatText(text) {
+  // Split the text into sentences
+  const sentences = split(text).filter(token => token.type === 'Sentence');
+  
+  // Capitalize the first word of each sentence and add a period at the end if missing
+  const formattedSentences = sentences.map(sentence => {
+    const sentenceText = sentence.raw;
+    const words = sentenceText.split(" ");
+    words[0] = words[0].charAt(0).toUpperCase() + words[0].slice(1);
+    let formattedSentence = words.join(" ");
+    if (!formattedSentence.endsWith(".")) {
+      formattedSentence += ".";
+    }
+    return formattedSentence;
+  });
+
+  // Join the sentences back into a formatted text
+  const formattedText = formattedSentences.join(" ");
+  return formattedText;
+}
 
 // Example translateText function (async)
 async function translateText(text) {
@@ -47,7 +68,9 @@ async function translateText(text) {
       forceBatch: false,
     });
     console.log("Translated Text:", result.text);
-    return result.text;
+    const formattedText = formatText(result.text);
+    
+    return formattedText;
   } catch (error) {
     console.error("Error translating text:", error);
     throw new Error("Error translating text");
