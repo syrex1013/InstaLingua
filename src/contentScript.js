@@ -88,6 +88,7 @@ function startSpeechRecognition() {
     window.webkitSpeechRecognition)();
   recognition.lang = "pl-PL";
   recognition.interimResults = false;
+  recognition.continuous = true; // Keep recognition running continuously
 
   recognition.onresult = function (event) {
     const text = event.results[0][0].transcript;

@@ -1,5 +1,5 @@
 import { translate } from "google-translate-api-x";
-import { split } from 'sentence-splitter';
+import { split } from "sentence-splitter";
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.msg === "start-record" || request.msg === "stop-record") {
@@ -12,6 +12,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         });
       } else {
         console.log("Background script could not find active tab");
+        chrome.runtime.sendMessage({
+          msg: "update-status",
+          status: "No active tab found. Please open a tab and try again.",
+        });
         sendResponse({ response: "No active tab found" });
       }
     });
@@ -37,25 +41,43 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     chrome.runtime.sendMessage(request);
   }
 });
-function formatText(text) {
-  // Split the text into sentences
-  const sentences = split(text).filter(token => token.type === 'Sentence');
-  
-  // Capitalize the first word of each sentence and add a period at the end if missing
-  const formattedSentences = sentences.map(sentence => {
-    const sentenceText = sentence.raw;
-    const words = sentenceText.split(" ");
-    words[0] = words[0].charAt(0).toUpperCase() + words[0].slice(1);
-    let formattedSentence = words.join(" ");
-    if (!formattedSentence.endsWith(".")) {
-      formattedSentence += ".";
-    }
-    return formattedSentence;
+
+async function correctGrammar(text) {
+  console.log("Correcting grammar for text:", text);
+  const response = await fetch("https://api.languagetool.org/v2/check", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams({
+      text: text,
+      language: "en-US",
+    }),
   });
 
-  // Join the sentences back into a formatted text
-  const formattedText = formattedSentences.join(" ");
-  return formattedText;
+  const data = await response.json();
+  let correctedText = text;
+  let offsetCorrection = 0;
+
+  data.matches.forEach((match) => {
+    const { offset, length, replacements } = match;
+    const replacement = replacements[0]?.value;
+    if (replacement) {
+      const originalPart = correctedText.substring(
+        offset + offsetCorrection,
+        offset + offsetCorrection + length
+      );
+      correctedText =
+        correctedText.substring(0, offset + offsetCorrection) +
+        replacement +
+        correctedText.substring(offset + offsetCorrection + length);
+      offsetCorrection += replacement.length - length;
+
+      console.log(`Changed "${originalPart}" to "${replacement}"`);
+    }
+  });
+
+  return correctedText;
 }
 
 // Example translateText function (async)
@@ -68,8 +90,8 @@ async function translateText(text) {
       forceBatch: false,
     });
     console.log("Translated Text:", result.text);
-    const formattedText = formatText(result.text);
-    
+    const formattedText = await correctGrammar(result.text);
+    console.log("Corrected Text:", formattedText);
     return formattedText;
   } catch (error) {
     console.error("Error translating text:", error);
