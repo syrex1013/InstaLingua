@@ -17,7 +17,7 @@ InstaLingua is a Chrome extension that translates Polish voice input into Englis
 
 ## Install
 
-**Awaiting publication on Chrome Web Store**
+[**Accepted to Chrome Web Store!**](https://chromewebstore.google.com/detail/instalingua/nffpiemmlffilpllflcngbndhahoghhl?authuser=0&hl=pl)
 
 ## Usage
 
