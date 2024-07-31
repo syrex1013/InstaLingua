@@ -33,12 +33,43 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         });
       });
     return true; // Keeps the message channel open for async response
+  } else if (request.msg === "translate-text-en") {
+    console.log("Message received:", request.msg);
+    translateText(request.text, false)
+      .then((translatedText) => {
+        sendResponse({ translatedText });
+      })
+      .catch((error) => {
+        sendResponse({
+          error: "Error translating text",
+          details: error.message,
+        });
+      });
+    return true; // Keeps the message channel open for async response
   } else if (
     request.msg === "update-status" ||
     request.msg === "update-result"
   ) {
     // Forward status and result updates to the popup
     chrome.runtime.sendMessage(request);
+  } else if (request.msg === "find-text") {
+    console.log("Message received:", request.msg);
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      if (tabs.length > 0) {
+        console.log("Background script sending message to content script");
+        chrome.tabs.sendMessage(tabs[0].id, request, (response) => {
+          sendResponse(response);
+        });
+      } else {
+        console.log("Background script could not find active tab");
+        chrome.runtime.sendMessage({
+          msg: "update-status",
+          status: "No active tab found. Please open a tab and try again.",
+        });
+        sendResponse({ response: "No active tab found" });
+      }
+    });
+    return true; // Keeps the message channel open for async response
   }
 });
 
@@ -81,15 +112,24 @@ async function correctGrammar(text) {
 }
 
 // Example translateText function (async)
-async function translateText(text) {
+async function translateText(text, toEnglish = true) {
   try {
+    let from_l = "pl";
+    let to_l = "en";
+    if (!toEnglish) {
+      from_l = "en";
+      to_l = "pl";
+    }
     const result = await translate(text, {
-      from: "pl",
-      to: "en",
+      from: from_l,
+      to: to_l,
       autoCorrect: true,
       forceBatch: false,
     });
     console.log("Translated Text:", result.text);
+    if (!toEnglish) {
+      return result.text;
+    }
     const formattedText = await correctGrammar(result.text);
     console.log("Corrected Text:", formattedText);
     return formattedText;

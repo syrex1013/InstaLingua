@@ -10,6 +10,41 @@ function updatePopupResult(result) {
   chrome.runtime.sendMessage({ msg: "update-result", result: result });
 }
 
+function findTextElements(element) {
+  if (element.nodeType === Node.TEXT_NODE && element.nodeValue.trim() !== "") {
+    let parent = element.parentElement;
+    while (parent) {
+      if (
+        parent.tagName === "DIV" &&
+        parent.getAttribute("class") ===
+          "html-div xe8uvvx xexx8yu x4uap5 x18d9i69 xkhd6sd x1gslohp x11i5rnm x12nagc x1mh8g0r x1yc453h x126k92a x18lvrbx"
+      ) {
+        console.log("Text found:", element.nodeValue.trim());
+        console.log("Element classes:", parent.getAttribute("class"));
+        //add class translated to prevent double-translation
+        parent.classList.add("translated");
+        chrome.runtime.sendMessage(
+          { msg: "translate-text-en", text: element.nodeValue.trim() },
+          (response) => {
+            if (response.translatedText) {
+              element.nodeValue = response.translatedText;
+            }
+          }
+        );
+
+        break;
+      }
+      parent = parent.parentElement;
+    }
+  } else if (element.nodeType === Node.ELEMENT_NODE) {
+    element.childNodes.forEach(findTextElements);
+  }
+}
+
+function printTextElements() {
+  findTextElements(document.body);
+}
+
 function startRecording() {
   console.log("Content script startRecording function called");
   if (mediaRecorder) {
@@ -134,5 +169,9 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     console.log("Content script received stop-record message");
     stopRecording();
     sendResponse({ response: "Recording stopped" });
+  } else if (request.msg === "find-text") {
+    console.log("Content script received find-text message");
+    printTextElements();
+    sendResponse({ response: "Text elements printed to console" });
   }
 });

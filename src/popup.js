@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const copyBtn = document.getElementById("copy-btn");
+  const findTextBtn = document.getElementById("find-text-btn");
   document.getElementById("start-record-btn").addEventListener("click", () => {
     copyBtn.innerText = "Copy";
     chrome.runtime.sendMessage({ msg: "start-record" }, (response) => {
@@ -20,7 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("result").innerText = request.result;
     }
   });
-
+  findTextBtn.addEventListener("click", () => {
+    chrome.runtime.sendMessage({ msg: "find-text" }, (response) => {
+      console.log(response.response);
+    });
+  });
   copyBtn.addEventListener("click", () => {
     const resultText = document.getElementById("result").innerText;
     navigator.clipboard
