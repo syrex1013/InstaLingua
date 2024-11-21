@@ -219,8 +219,10 @@ async function translatePage(baseElement) {
   console.log("Translation initiated!");
 }
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  console.log("Content script received message:", request);
   if (request.message === "TabUpdated") {
-    console.log(document.location.href);
+    console.log("Host:", window.location.hostname);
+    console.log("Path:", window.location.pathname);
     if (
       window.location.hostname === "www.instagram.com" &&
       window.location.pathname.startsWith("/direct/t/")
