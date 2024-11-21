@@ -1,3 +1,5 @@
+const { default: translate } = require("google-translate-api-x");
+
 let mediaRecorder = null;
 let stream = null;
 let recognition = null;
@@ -160,7 +162,56 @@ function startSpeechRecognition() {
   recognition.start();
 }
 
+async function translatePage() {
+  const apiUrl =
+    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=pl&dt=t&q=";
+
+  // Function to fetch translations
+  async function translateText(text) {
+    if (!text.trim()) return text; // Skip empty strings
+    try {
+      const response = await fetch(apiUrl + encodeURIComponent(text));
+      const result = await response.json();
+      return result[0]?.map((item) => item[0]).join("") || text;
+    } catch (error) {
+      console.error("Translation error:", error);
+      return text;
+    }
+  }
+
+  // Recursive function to translate text nodes
+  async function translateElement(element) {
+    if (element.nodeType === 3) {
+      // Text node
+      element.textContent = await translateText(element.textContent);
+    } else if (element.nodeType === 1 && element.childNodes) {
+      // Element node
+      for (let child of element.childNodes) {
+        await translateElement(child);
+      }
+    }
+  }
+
+  // Start translation from the body
+  console.log("Translating the page...");
+  if (
+    window.location.hostname === "www.instagram.com" &&
+    window.location.pathname.startsWith("/direct/t/")
+  ) {
+    await translateElement(document.body);
+  }
+  console.log("Translation complete!");
+}
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.message === "TabUpdated") {
+    console.log(document.location.href);
+    if (
+      window.location.hostname === "www.instagram.com" &&
+      window.location.pathname.startsWith("/direct/")
+    ) {
+      translatePage();
+    }
+  }
   if (request.msg === "start-record") {
     console.log("Content script received start-record message");
     startRecording();
