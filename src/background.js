@@ -1,5 +1,14 @@
 import { translate } from "google-translate-api-x";
 import { split } from "sentence-splitter";
+import { franc } from "franc-min"; // Import franc-min for language detection
+
+// Detect the language of the text
+async function detectLanguage(text) {
+  // Use `franc` to detect the language code
+  const langCode = franc(text.trim());
+  console.log(`Detected language code: ${langCode}`);
+  return langCode; // Return detected language code
+}
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.msg === "start-record" || request.msg === "stop-record") {
@@ -35,16 +44,39 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     return true; // Keeps the message channel open for async response
   } else if (request.msg === "translate-text-en") {
     console.log("Message received:", request.msg);
-    translateText(request.text, false)
-      .then((translatedText) => {
-        sendResponse({ translatedText });
+
+    // Detect language before translating
+    detectLanguage(request.text)
+      .then((lang) => {
+        if (lang === "pol") {
+          console.log("Text is already in Polish. Returning the same text.");
+          sendResponse({ translatedText: request.text }); // Return the same text
+        } else if (lang === "eng") {
+          translateText(request.text, false)
+            .then((translatedText) => {
+              sendResponse({ translatedText });
+            })
+            .catch((error) => {
+              sendResponse({
+                error: "Error translating text",
+                details: error.message,
+              });
+            });
+        } else {
+          console.log(
+            "Text is not in Polish or English. Returning the same text."
+          );
+          sendResponse({ translatedText: request.text }); // Return the same text
+        }
       })
       .catch((error) => {
+        console.error("Error detecting language:", error);
         sendResponse({
-          error: "Error translating text",
+          error: "Error detecting language",
           details: error.message,
         });
       });
+
     return true; // Keeps the message channel open for async response
   } else if (
     request.msg === "update-status" ||

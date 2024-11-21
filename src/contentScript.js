@@ -162,31 +162,52 @@ function startSpeechRecognition() {
   recognition.start();
 }
 
-async function translatePage() {
-  const apiUrl =
-    "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=pl&dt=t&q=";
-
-  // Function to fetch translations
-  async function translateText(text) {
-    if (!text.trim()) return text; // Skip empty strings
-    try {
-      const response = await fetch(apiUrl + encodeURIComponent(text));
-      const result = await response.json();
-      return result[0]?.map((item) => item[0]).join("") || text;
-    } catch (error) {
-      console.error("Translation error:", error);
-      return text;
+function observeDOMForElement(selector, callback) {
+  const observer = new MutationObserver((mutations) => {
+    const element = document.querySelector(selector);
+    if (element) {
+      callback(element);
+      observer.disconnect(); // Stop observing after the element is found
     }
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+  });
+}
+
+async function translatePage(baseElement) {
+  function translateText(text) {
+    if (!text.trim()) return Promise.resolve(text); // Skip empty strings
+    return new Promise((resolve, reject) => {
+      chrome.runtime.sendMessage(
+        { msg: "translate-text-en", text: text },
+        (response) => {
+          if (response.translatedText) {
+            resolve(response.translatedText);
+          } else if (response.error) {
+            console.error(
+              "Translation Error:",
+              response.error,
+              response.details
+            );
+            resolve(text); // Return original text on error
+          }
+        }
+      );
+    });
   }
 
-  // Recursive function to translate text nodes
   async function translateElement(element) {
     if (element.nodeType === 3) {
       // Text node
-      element.textContent = await translateText(element.textContent);
+      await translateText(element.textContent).then((translatedText) => {
+        element.textContent = translatedText;
+      });
     } else if (element.nodeType === 1 && element.childNodes) {
       // Element node
-      for (let child of element.childNodes) {
+      for (const child of element.childNodes) {
         await translateElement(child);
       }
     }
@@ -194,22 +215,25 @@ async function translatePage() {
 
   // Start translation from the body
   console.log("Translating the page...");
-  if (
-    window.location.hostname === "www.instagram.com" &&
-    window.location.pathname.startsWith("/direct/t/")
-  ) {
-    await translateElement(document.body);
-  }
-  console.log("Translation complete!");
+  await translateElement(baseElement);
+  console.log("Translation initiated!");
 }
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.message === "TabUpdated") {
     console.log(document.location.href);
     if (
       window.location.hostname === "www.instagram.com" &&
-      window.location.pathname.startsWith("/direct/")
+      window.location.pathname.startsWith("/direct/t/")
     ) {
-      translatePage();
+      console.log("Observing DOM for conversation div...");
+      observeDOMForElement(
+        'div[aria-label^="Konwersacja z:"]',
+        async (element) => {
+          console.log("Found conversation div:", element);
+          await translatePage(element);
+          console.log("Translation completed!");
+        }
+      );
     }
   }
   if (request.msg === "start-record") {
