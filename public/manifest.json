@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "InstaLingua",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Translate Polish voice input into English text with nice formatting.",
   "icons": {
     "16": "icons/icon16.png",
